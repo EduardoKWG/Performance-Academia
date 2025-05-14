@@ -1,24 +1,168 @@
-.bg-laranja{
-    background-color: #f57c00 !important;
+:root {
+    --laranja: #f57c00;
+    --laranja-escuro: #e65100;
+    --preto: #111;
+    --branco: #fff;
+    --cinza-claro: #f7f7f7;
 }
 
-.bg-preto{
-    background-color: #111 !important;
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding-top: 60px;
 }
 
-.btn-laranja{
-    background-color: #f57c00;
-    color: white;
+.bg-laranja { background-color: var(--laranja); }
+.bg-preto { background-color: var(--preto); }
+
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
     border: none;
 }
 
-.btn-laranja:hover{
-    background-color: #e65100;
-    color: white;
+.btn-laranja {
+    background-color: var(--laranja);
+    color: var(--branco);
 }
 
-/* Ajustes visuais adicionais */
-.navbar-brand{
-    font-weight: bold;
-    font-size: 1.5rem;
+.btn-laranja:hover {
+    background-color: var(--laranja-escuro);
+    color: var(--branco);
 }
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    color: var(--branco);
+}
+
+.btn-instagram:hover {
+    opacity: 0.9;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.hero {
+    background: linear-gradient(to right, var(--laranja), #ff9800);
+    color: var(--branco);
+    position: relative;
+    padding: 100px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero .container { z-index: 2; }
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#sobre {
+    background-color: var(--cinza-claro);
+    padding: 60px 0;
+}
+
+#sobre .card {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#sobre .card-body { padding: 30px; }
+
+#sobre .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#sobre i { color: var(--laranja); }
+
+.instagram-section {
+    background: url('imagens/planofundo.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.instagram-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.instagram-gradient-text {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#contato {
+    position: relative;
+    background: linear-gradient(135deg, var(--laranja) 0%, #ff9800 100%);
+    color: var(--branco);
+}
+
+#contato .btn {
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.info-box {
+    background: rgba(255,255,255,0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.animate__animated { opacity: 0; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 { animation: fadeInUp 2s ease-out 0.3s forwards; }
+.hero p { animation: fadeInUp 2s ease-out 1s forwards; }
