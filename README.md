@@ -2,18 +2,33 @@
 
 Este é um projeto/site desenvolvido como parte de um projeto de extensão de curso da faculdade Descomplica(PEX).
 
+![Screenshot da capa](./imagens/print-capa.jpg)
+![Screenshot do site](./imagens/print-estrutura.jpg)
+![Screenshot do site](./imagens/print-destaques.jpg)
+
+> 💡 Imagens capturadas diretamente do site.
+
+---
+
 ## Tecnologias usadas
 
 - HTML
-- CSS
-- JavaScript
+- CSS (com variáveis e animações)
 - Bootstrap
 
 ## Funcionalidades
 
-- **Seção de Instagram**: Exibe uma seção interativa com as postagens mais recentes da academia.
-- **Design Responsivo**: O site é otimizado para diferentes tamanhos de tela (desktop, tablet, celular).
-- **Slides Animados**: Imagens e conteúdo em destaque com transições suaves na Hero Section.
+- Página inicial com banner chamativo (hero)
+- Sessão "Sobre" com cartões informativos animados
+- Carrossel de vídeos verticais no estilo Instagram Reels
+- Sessão com destaque para o Instagram da academia
+- Design responsivo e moderno com efeitos sutis
+
+## 🎥 Destaques Visuais
+
+- 🌈 Botões com gradiente do Instagram
+- 💻 Layout responsivo adaptado para celular, tablet e desktop
+- 🎞️ Carrossel de vídeos verticais com controles personalizados
 
 ## Como rodar o projeto localmente
 

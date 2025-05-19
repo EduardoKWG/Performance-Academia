@@ -1,3 +1,6 @@
+/*==============================
+  VARIÁVEIS
+==============================*/
 :root {
     --laranja: #f57c00;
     --laranja-escuro: #e65100;
@@ -6,14 +9,23 @@
     --cinza-claro: #f7f7f7;
 }
 
+/*==============================
+  BASE
+==============================*/
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     padding-top: 60px;
 }
 
+/*==============================
+  UTILITÁRIAS
+==============================*/
 .bg-laranja { background-color: var(--laranja); }
 .bg-preto { background-color: var(--preto); }
 
+/*==============================
+  BOTÕES
+==============================*/
 .btn {
     transition: all 0.3s ease;
     border-radius: 25px;
@@ -41,11 +53,17 @@ body {
     opacity: 0.9;
 }
 
+/*==============================
+  NAVBAR
+==============================*/
 .navbar-brand {
     font-weight: bold;
     font-size: 1.4rem;
 }
 
+/*==============================
+  HERO
+==============================*/
 .hero {
     background: linear-gradient(to right, var(--laranja), #ff9800);
     color: var(--branco);
@@ -69,13 +87,18 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 2s ease-out 0.3s forwards;
 }
 
 .hero p {
     font-size: 1.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 2s ease-out 1s forwards;
 }
 
+/*==============================
+  SOBRE
+==============================*/
 #sobre {
     background-color: var(--cinza-claro);
     padding: 60px 0;
@@ -103,6 +126,9 @@ body {
 
 #sobre i { color: var(--laranja); }
 
+/*==============================
+  INSTAGRAM
+==============================*/
 .instagram-section {
     background: url('imagens/planofundo.jpg') center/cover no-repeat;
     position: relative;
@@ -111,10 +137,7 @@ body {
 .instagram-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -128,6 +151,9 @@ body {
     letter-spacing: 0.5px;
 }
 
+/*==============================
+  CONTATO
+==============================*/
 #contato {
     position: relative;
     background: linear-gradient(135deg, var(--laranja) 0%, #ff9800 100%);
@@ -151,6 +177,9 @@ body {
     backdrop-filter: blur(5px);
 }
 
+/*==============================
+  ANIMAÇÕES
+==============================*/
 .animate__animated { opacity: 0; }
 
 @keyframes fadeInUp {
@@ -164,5 +193,91 @@ body {
     }
 }
 
-.hero h1 { animation: fadeInUp 2s ease-out 0.3s forwards; }
-.hero p { animation: fadeInUp 2s ease-out 1s forwards; }
+/*==============================
+  VÍDEOS / CARROSSEL
+==============================*/
+#videos {
+    position: relative;
+    overflow: hidden;
+}
+
+#videoCarousel {
+    height: 70vh;
+    min-height: 500px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner {
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: auto;
+    max-width: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item video {
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--laranja);
+    border-radius: 50%;
+    background-size: 60%;
+}
+
+/* Vídeo vertical container */
+.video-container-vertical {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.video-container-vertical video {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+/*==============================
+  RESPONSIVO
+==============================*/
+@media (min-width: 992px) {
+    .video-container-vertical {
+        max-width: 350px;
+        height: 80vh;
+    }
+
+    .carousel-inner {
+        max-width: 90%;
+    }
+}
