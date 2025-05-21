@@ -1,6 +1,7 @@
 # Performance Academia
 
 Este é um projeto/site desenvolvido como parte de um projeto de extensão de curso da faculdade Descomplica(PEX).
+Veja como ficou o projeto nesse link: https://682ba2cc59c4f54393bddfd0--cool-pavlova-1a9b0f.netlify.app/
 
 ![Screenshot da capa](./imagens/print-capa.jpg)
 ![Screenshot do site](./imagens/print-estrutura.jpg)
